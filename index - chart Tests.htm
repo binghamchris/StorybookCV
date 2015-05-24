@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/icon.png">
+	
+    <title>Chris Bingham</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+	<!--<link href="css/timeline.css" rel="stylesheet">-->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><![endif]-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<script src="js/Chart.Core.js"></script>
+	<script src="js/Chart.Doughnut.js"></script>
+	<script src="js/canvasjs.min.js"></script>
+	
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chris Bingham</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#qualifications">Qualifications</a></li>
+			<li><a href="#languages">Languages</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	<section id="home">
+	  <div class="jumbotron">
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="col-sm-2">
+			  <h1>Chris Bingham</h1>
+			  <h2>Linux, OpenStack, and Cloud Architect</h2>
+			</div>
+			<div class="col-sm-4"">
+  
+			</div>
+			<div class="col-sm-3"">
+			  <a href="https://ch.linkedin.com/in/binghamchris"><img class="img-responsive" alt="LinkedIn Profile" src="img/linkedin.jpg"></img></a>
+			  <a href="https://www.xing.com/profile/Chris_Bingham"><img class="img-responsive" alt="Xing Profile" src="img/xing.jpg"></img></a>
+			  <a href="https://clustersandclouds.wordpress.com"><img class="img-responsive" alt="Blog" src="img/wordpress.jpg"></img></a>
+			  <a href="https://www.flickr.com/photos/butters-photos"><img class="img-responsive" alt="Flickr" src="img/flickr.jpg"></img></a>
+			  <a href="callto:chris.pearit"><img class="img-responsive" alt="Skype" src="img/skype.jpg"></img></a>
+			</div>
+			<div class="col-sm-3"">
+			  <img class="img-responsive" alt="Avatar" src="img/avatar.jpg"></img>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<section id="about">
+	  <div class=container-fluid>
+		<div class="row">
+		  <div class=col-xs-12>
+			<p>I’m a systems engineer, solution architect, and team leader with broad experience across both Linux and Windows, having worked with customers in both Europe and North America in industries as diverse as defence, automotive, and pharmaceuticals.</p>
+			<p>I specialise in cloud, and in particular OpenStack and AWS, having recruited and lead a technical team of 12 to build the first pharmaceutical industry compliant OpenStack cloud. I have experience architecting and implementing web application infrastructures on AWS, including automation using CloudFormation, Heat, and Puppet.</p>
+			<p>In my projects I make heavy use of automation to streamline recurring processes and free up my time to do more interesting things!</p>
+		  </div>		
+		</div>
+	  </div>
+	</section>
+	<section id="skills">
+	  <div class=container-fluid>
+		<div class="row">
+		  <div class="col-sm-2">
+			<h2>Skills</h2>
+		  </div>
+		  <div class="coll-sm-10">
+			
+			<div id="chartContainer" style="height: 200px; width: 200px;"></div>
+				
+	  
+			<canvas id="chart-area" width="200" height="200"></canvas>
+			<script>
+			  var doughnutData = [
+				  {
+					  value: 1,
+					  label: "One",
+					  labelColor: "white"
+				  },
+				  {
+					  value: 2,
+					  label: "Two"
+				  },
+				  {
+					  value: 3,
+					  label: "Three"
+				  },
+				  {
+					  value: 4,
+					  label: "Four"
+				  },
+				  {
+					  value: 5,
+					  label: "Five"
+				  }
+			  ];
+			  window.onload = function(){
+				alert("chart.js");
+				  var ctx = document.getElementById("chart-area").getContext("2d");
+				  window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+					animation: false,
+					//responsive : true,
+					segmentShowStroke : false,
+					tooltipTemplate: "<%= value %>",
+					onAnimationComplete: function()
+					  {
+						this.showTooltip(this.segments, true);
+					  },
+					tooltipEvents: [],
+					showTooltips: true
+				  });
+				  alert("canvasjs");
+				var chart = new CanvasJS.Chart("chartContainer",
+				{
+				  title:{
+					text: "Top U.S Smartphone Operating Systems By Market Share, Q3 2012"
+				  },
+				  data: [
+				  {
+				   type: "doughnut",
+				   dataPoints: [
+				   {  y: 53.37, indexLabel: "Android" },
+				   {  y: 35.0, indexLabel: "Apple iOS" },
+				   {  y: 7, indexLabel: "Blackberry" },
+				   {  y: 2, indexLabel: "Windows Phone" },
+				   {  y: 5, indexLabel: "Others" }
+				   ]
+				 }
+				 ]
+			    });
+			
+				chart.render();
+			  };
+			</script>
+			<div id="chart_div" style="width: 200px; height: 200px;"></div>
+			<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+			<script type="text/javascript">
+		
+			  // Load the Visualization API and the piechart package.
+			  google.load('visualization', '1.0', {'packages':['corechart']});
+		
+			  // Set a callback to run when the Google Visualization API is loaded.
+			  google.setOnLoadCallback(drawChart);
+			  
+			  function drawChart() {
+				// Create the data table.
+			  
+				var data = google.visualization.arrayToDataTable([
+				  ['Skill', '%'],
+				  ['Enterprise Linux',     25],
+				  ['OpenStack',      20],
+				  ['Amazon Web Service',  10],
+				  ['Computer Systems Validation (GxP)', 10],
+				  ['Team Leading', 10],
+				  ['Gluster', 5],
+				  ['Puppet', 5],
+				  ['Perl', 5],
+				  ['Technical Training', 5],
+				  ['Customer Requirements Gathering', 5]
+				]);
+		
+				var options = {
+				  pieHole: 0.5,
+				  pieStartAngle: 12,
+				  legend: {position: 'labeled'},
+				  pieSliceText: 'none',
+				  enableInteractivity: false,
+				};
+
+				// Instantiate and draw our chart, passing in some options.
+				var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+				chart.draw(data, options);
+			  }
+			</script>
+
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<section id="experience">
+	  <div class=container-fluid>
+		<div class="row">
+		  <div class="col-sm-2">
+			<h2>Experience</h2>
+		  </div>
+		  <div class="coll-sm-10">
+			<ul>
+			  <li>
+				<div>
+				  <div>
+					<h3>Cloudlynx AG</h3>
+					<h4 class="subheading">Chief Engineer</h4>
+					<h4 class="subheading">08/2014 – 04/2015</h4>
+				  </div>
+				  <div>
+					<p>After proposing the initial idea for Cloudlynx and spending a year helping to get the company and its service started, I recruited and lead the Engineering team to the successful deployment of the first GxP compliance OpenStack cloud.</p>
+					<p>The team had a diverse range of backgrounds and knowledge and works to develop and build out Cloudlynx’s IaaS platform as well as develop new products for the Cloudlynx IaaS. We made heavy use of Dell, Red Hat, and Juniper products, and OpenStack in particular, across three data centres in Basel, Zürich, and Geneva.</p>
+				  </div>
+				</div>
+			  </li>
+			  <li>
+				<div>
+				  <div>
+					<h3>Datalynx AG</h3>
+					<h4 class="subheading">Senior Linux/Microsoft Architect</h4>
+					<h4 class="subheading">09/2008 – 07/2014</h4>
+				  </div>
+				  <div>
+					<p>During my time with Datalynx Group (initially with Datalynx AG and later with Processlynx AG) I worked on a number of consultancy projects for customers and internally within the company. Key projects included:
+					  <ul>
+						<li>Operations of Novartis Pharmaceutical’s drug development HPC system</li>
+						<li>Project managing and deploying Datalynx Group’s invoicing and time management system</li>
+						<li>Managing the IT integration for a merge between two consultancy firms</li>
+						<li>Initiating the project that became Cloudlynx AG</li>
+					  </ul>
+					</p>
+				  </div>
+				</div>
+			  </li>
+			  <li>
+				<div>
+				  <div>
+					<h3>Novartis (via Datalynx AG)</h3>
+					<h4 class="subheading">Application Service Manager, Modelling & Simulation</h4>
+					<h4 class="subheading">09/2008 – 07/2011</h4>
+				  </div>
+				  <div>
+					<p>Joining an established, successful group as a member of the operations team, I played an active role in, and later spearheaded, a number of projects under Novartis’ industry leading “MODESIM” initiative.</p>
+					<p>I worked to establish and maintain close relationships with our customers in order to understand their rapidly evolving requirements. This focus helped the team to achieve a 98% customer satisfaction rating, which was described as “unprecedented” and ranks as one of the highest such ratings ever achieved within Novartis IT globally. It also led to a nomination from the customers for an “Above and Beyond” award, which I received in late 2010.</p>
+				  </div>
+				</div>
+				<div class="line"></div>
+			  </li>
+			  <li>
+				<div>
+				  <div>
+					<h3>Image Development Technology Ltd.</h3>
+					<h4 class="subheading">Senior Systems Consultant</h4>
+					<h4 class="subheading">05/2007 – 08/2008</h4>
+				  </div>
+				  <div>
+					<p>Adopting my first senior-level position, I worked as third and second line support for customers across the UK and in North America in addition to spearheading two upgrade projects. I also created and delivered technical trainings internally within the company, and assisted their junior staff with the efforts to develop their technical skills.</p>
+				  </div>
+				</div>
+				<div class="line"></div>
+			  </li>
+			  <li>
+				<div>
+				  <div>
+					<h4>Applied Computing & Engineering Ltd.</h4>
+					<h4 class="subheading">Computer Systems Engineer</h4>
+					<h4 class="subheading">03/2004 – 05/2007</h4>
+				  </div>
+				  <div>
+					<p>After successfully passing vetting for UK Ministry of Defence ‘SC’ security clearance and “learning the ropes” of Linux, Unix, and HPC, I undertook a number of projects to architect HPC clusters for large corporate clients.</p>
+					<p>I conceived and championed a new design of hybrid Windows/Linux cluster, tailored to meet the strict security requirements of our main clientele. This design was exceptionally well received by early customers, and played a key role in substantially increasing Applied Computing’s HPC cluster sales.</p>
+				  </div>
+				</div>
+				<div class="line"></div>
+			  </li>  
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<section id="qualifications">
+	  <div class=container-fluid>
+		<div class="row">
+		  <div class="col-sm-2">
+			<h2>Qualifications</h2>
+		  </div>
+		  <div class="coll-sm-10">
+			<table class="table">
+			  <tr>
+				<td>Open University BSc Hons Computing & IT</td><td>Incomplete</td>
+			  </tr>
+			  <tr>
+				<td>Red Hat Certified Engineer</td><td><a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-127-841">111-127-841</a></td>
+			  </tr>
+			  <tr>
+				<td>AWS Certified Solutions Architect - Associate Level</td><td>AWS-ASA-505</td>
+			  </tr>
+			  <tr>
+				<td>Red Hat Certified Virtulisation Administrator</td><td><a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-127-841">111-127-841</a></td>
+			  </tr>
+			  <tr>
+				<td>Red Hat Certified Systems Administrator in Red Hat OpenStack</td><td><a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-127-841">111-127-841</a></td>
+			  </tr>
+			  <tr>
+				<td>Red Hat Certificate of Experitise in Hybrid Cloud Storage</td><td><a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-127-841">111-127-841</a></td>
+			  </tr>
+			  <tr>
+				<td>LPIC-1: Linux Server Professional</td><td>LPI000232747</td>
+			  </tr>
+			  <tr>
+				<td>ITIL Version 3 Foundation</td><td>1202#311445005</td>
+			  </tr>
+			  <tr>
+				<td>MCITP: Enterprise Administrator</td><td>3682804</td>
+			  </tr>
+			</table>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<section id="languages">
+	  <div class=container-fluid>
+		<div class="row">
+		  <div class="col-sm-2">
+			<h2>Languages</h2>
+		  </div>
+		  <div class="col-sm-5">
+			<h3>United Kingdom</h3>
+			<ul>
+			  <li>Conutry of Birth</li>
+			  <li>British & EU Citizen</li>
+			  <li>English - Fluent (Mother Tounge)</li>
+			</ul>
+			<img class="img-responsive" alt="Graphic of the United Kingdom" src="img/gb.png" />
+		  </div>
+		  <div class="col-sm-5">
+			<h3>Switzerland</h3>
+			<ul>
+			  <li>Conutry of Residence</li>
+			  <li>C Permit</li>
+			  <li>German - Basic (Approx. A2/B1)</li>
+			</ul>
+			<img class="img-responsive" alt="Graphic of Switzerland" src="img/ch.png" />
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  
+  
+
+</body></html>
