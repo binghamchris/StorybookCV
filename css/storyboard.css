@@ -1,0 +1,61 @@
+.jumbotron {
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 430px;
+  background-attachment: fixed;
+  margin-bottom: 0;
+}
+
+.title-text, .social-links-div {
+  transform: translateY(-10%);
+}
+.title-text h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 0;
+}
+.title-text h2 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.7em;
+  margin-top: 1%;
+}
+
+.social-links, .social-links ul {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.social-links li {
+  display: inline !important;
+}
+
+.social-links img {
+  display: inline;
+}
+
+.container-padded {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.section-title h2 {
+  margin-top: 0px;
+}
+
+.img-map {
+  float: right;
+  margin: 10px;
+}
+
+.ct-chart {
+  max-height: 550px;
+}
+.skills-chart {
+  max-height: 550px;
+}
+
+.ct-chart .ct-label {
+  font-size: 14px;
+}

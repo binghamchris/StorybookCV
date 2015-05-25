@@ -4195,12 +4195,12 @@ a.badge:hover, a.badge:focus {
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #bfbfc0;
-  background-image: url("img/bg_thunderbird.jpg");
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    color: inherit; }
+    color: inherit;
+    position: relative;
+    }
   .jumbotron p {
     margin-bottom: 15px;
     font-size: 21px;
@@ -5638,3 +5638,62 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+/* Added by me*/
+.avatar {
+    border: 1px solid #2B5223;
+}
+
+.container-alt {
+  background-color: #2E4223;
+  border-color: #2E4223;
+  color: #DCDCDC;
+}
+
+.jumbotron {
+  background-image: url("../img/bg_thunderbird.jpg");
+}
+
+.ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
+  stroke: #6F1F1B;
+}
+.ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
+  stroke: #B4A26D;
+}
+.ct-chart .ct-series.ct-series-c .ct-slice.ct-donut {
+  stroke: #7A8371;
+}
+.ct-chart .ct-series.ct-series-d .ct-slice.ct-donut {
+  stroke: #812523;
+}
+.ct-chart .ct-series.ct-series-e .ct-slice.ct-donut {
+  stroke: #586A54;
+}
+.ct-chart .ct-series.ct-series-f .ct-slice.ct-donut {
+  stroke: #B19D59;
+}
+.ct-chart .ct-series.ct-series-g .ct-slice.ct-donut {
+  stroke: #2B5223;
+}
+.ct-chart .ct-series.ct-series-h .ct-slice.ct-donut {
+  stroke: #6F1F1B;
+}
+.ct-chart .ct-series.ct-series-i .ct-slice.ct-donut {
+  stroke: #93A09F;
+}
+.ct-chart .ct-series.ct-series-j .ct-slice.ct-donut {
+  stroke: #2E4223;
+}
+
+.ct-chart .ct-label {
+  color: #2E4223;
+  fill: #2E4223;
+}
+
+.timeline-content {
+  border-color-left: : #DCDCDC; 
+}
+
+.timeline-content:before {
+  background: #DCDCDC;
+}

@@ -29,9 +29,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 	<link rel="stylesheet" href="css/chartist.min.css">
-	
-	<link rel="stylesheet" href="css/thunderbird.css">
+	<link rel="stylesheet" href="css/timeline.css">
+	<link rel="stylesheet" href="css/thunderbird-colours.css">
+	<link rel="stylesheet" href="css/storyboard.css">
 	
   </head>
 
@@ -62,33 +64,37 @@
     </nav>
 	<section id="home">
 	  <div class="jumbotron">
-		<div class="container-fluid">
+		<div class="container-fluid title-text">
 		  <div class="row">
-			<div class="col-sm-2">
+			<div class="col-sm-8 title-text">
 			  <h1>Chris Bingham</h1>
 			  <h2>Linux, OpenStack, and Cloud Architect</h2>
 			</div>
-			<div class="col-sm-4"">
-  
+			<div class="col-sm-4 social-links-div">
+			  <ul class="social-links">
+				<li><a href="https://ch.linkedin.com/in/binghamchris"><img class="img-responsive" alt="LinkedIn Profile" src="img/linkedin.jpg" /></a></li>
+				<li><a href="https://www.xing.com/profile/Chris_Bingham"><img class="img-responsive" alt="Xing Profile" src="img/xing.jpg"></img></a></li>
+				<li><a href="https://github.com/binghamchris"><img class="img-responsive" alt="Github Profile" src="img/github.jpg"></img></a></li>
+				<li><a href="https://clustersandclouds.wordpress.com"><img class="img-responsive" alt="Blog" src="img/wordpress.jpg"></img></a></li>
+				<li><a href="https://www.flickr.com/photos/butters-photos"><img class="img-responsive" alt="Flickr" src="img/flickr.jpg"></img></a></li>
+				<li><a href="callto:chris.pearit"><img class="img-responsive" alt="Skype" src="img/skype.jpg"></img></a></li>
+			  </ul>
 			</div>
-			<div class="col-sm-3"">
-			  <a href="https://ch.linkedin.com/in/binghamchris"><img class="img-responsive" alt="LinkedIn Profile" src="img/linkedin.jpg"></img></a>
-			  <a href="https://www.xing.com/profile/Chris_Bingham"><img class="img-responsive" alt="Xing Profile" src="img/xing.jpg"></img></a>
-			  <a href="https://clustersandclouds.wordpress.com"><img class="img-responsive" alt="Blog" src="img/wordpress.jpg"></img></a>
-			  <a href="https://www.flickr.com/photos/butters-photos"><img class="img-responsive" alt="Flickr" src="img/flickr.jpg"></img></a>
-			  <a href="callto:chris.pearit"><img class="img-responsive" alt="Skype" src="img/skype.jpg"></img></a>
-			</div>
-			<div class="col-sm-3"">
-			  <img class="img-responsive" alt="Avatar" src="img/avatar.jpg"></img>
-			</div>
+			<!--<div class="col-sm-2">
+			  <img class="img-responsive avatar" alt="Avatar" src="img/avatar.jpg"></img>
+			</div>-->
 		  </div>
 		</div>
 	  </div>
+
 	</section>
 	<section id="about">
-	  <div class=container-fluid>
+	  <div class="container-fluid container-alt container-padded">
 		<div class="row">
-		  <div class=col-xs-12>
+		  <div class="col-sm-2 section-title">
+			<h2>About Me</h2>
+		  </div>
+		  <div class=col-sm-10>
 			<p>I’m a systems engineer, solution architect, and team leader with broad experience across both Linux and Windows, having worked with customers in both Europe and North America in industries as diverse as defence, automotive, and pharmaceuticals.</p>
 			<p>I specialise in cloud, and in particular OpenStack and AWS, having recruited and lead a technical team of 12 to build the first pharmaceutical industry compliant OpenStack cloud. I have experience architecting and implementing web application infrastructures on AWS, including automation using CloudFormation, Heat, and Puppet.</p>
 			<p>In my projects I make heavy use of automation to streamline recurring processes and free up my time to do more interesting things!</p>
@@ -97,115 +103,90 @@
 	  </div>
 	</section>
 	<section id="skills">
-	  <div class=container-fluid>
+	  <div class="container-fluid container-padded">
 		<div class="row">
-		  <div class="col-sm-2">
+		  <div class="col-sm-2 section-title">
 			<h2>Skills</h2>
 		  </div>
-		  <div class="coll-sm-10">
-			
+		  <div class="col-sm-10 skills-chart">
 			<div class="ct-chart ct-perfect-fourth" id="skillsChart"></div>
-			
 		  </div>
 		</div>
 	  </div>
 	</section>
 	<section id="experience">
-	  <div class=container-fluid>
+	  <div class="container-fluid container-alt container-padded">
 		<div class="row">
-		  <div class="col-sm-2">
+		  <div class="col-sm-2 section-title">
 			<h2>Experience</h2>
 		  </div>
-		  <div class="coll-sm-10">
-			<ul>
+		  <div class="col-sm-10">
+			<ul class="timeline">
 			  <li>
-				<div>
-				  <div>
-					<h3>Cloudlynx AG</h3>
-					<h4 class="subheading">Chief Engineer</h4>
-					<h4 class="subheading">08/2014 – 04/2015</h4>
-				  </div>
-				  <div>
-					<p>After proposing the initial idea for Cloudlynx and spending a year helping to get the company and its service started, I recruited and lead the Engineering team to the successful deployment of the first GxP compliance OpenStack cloud.</p>
-					<p>The team had a diverse range of backgrounds and knowledge and works to develop and build out Cloudlynx’s IaaS platform as well as develop new products for the Cloudlynx IaaS. We made heavy use of Dell, Red Hat, and Juniper products, and OpenStack in particular, across three data centres in Basel, Zürich, and Geneva.</p>
-				  </div>
+				<span class='timeline-date'>08/2014 – 04/2015</span>
+				<div class="timeline-content">
+				  <h3>Cloudlynx AG</h3>
+				  <h4 class="subheading">Chief Engineer</h4>
+				  <p>After proposing the initial idea for Cloudlynx and spending a year helping to get the company and its service started, I recruited and lead the Engineering team to the successful deployment of the first GxP compliance OpenStack cloud.</p>
+				  <p>The team had a diverse range of backgrounds and knowledge and works to develop and build out Cloudlynx’s IaaS platform as well as develop new products for the Cloudlynx IaaS. We made heavy use of Dell, Red Hat, and Juniper products, and OpenStack in particular, across three data centres in Basel, Zürich, and Geneva.</p>
 				</div>
 			  </li>
 			  <li>
-				<div>
-				  <div>
-					<h3>Datalynx AG</h3>
-					<h4 class="subheading">Senior Linux/Microsoft Architect</h4>
-					<h4 class="subheading">09/2008 – 07/2014</h4>
-				  </div>
-				  <div>
-					<p>During my time with Datalynx Group (initially with Datalynx AG and later with Processlynx AG) I worked on a number of consultancy projects for customers and internally within the company. Key projects included:
-					  <ul>
-						<li>Operations of Novartis Pharmaceutical’s drug development HPC system</li>
-						<li>Project managing and deploying Datalynx Group’s invoicing and time management system</li>
-						<li>Managing the IT integration for a merge between two consultancy firms</li>
-						<li>Initiating the project that became Cloudlynx AG</li>
-					  </ul>
-					</p>
-				  </div>
+				<span class='timeline-date'>09/2008 – 07/2014</span>
+				<div class="timeline-content">
+				  <h3>Datalynx AG</h3>
+				  <h4 class="subheading">Senior Linux/Microsoft Architect</h4>
+				  <p>During my time with Datalynx Group (initially with Datalynx AG and later with Processlynx AG) I worked on a number of consultancy projects for customers and internally within the company. Key projects included:
+					<ul>
+					  <li>Operations of Novartis Pharmaceutical’s drug development HPC system</li>
+					  <li>Project managing and deploying Datalynx Group’s invoicing and time management system</li>
+					  <li>Managing the IT integration for a merge between two consultancy firms</li>
+					  <li>Initiating the project that became Cloudlynx AG</li>
+					</ul>
+				  </p>
 				</div>
 			  </li>
 			  <li>
-				<div>
-				  <div>
-					<h3>Novartis (via Datalynx AG)</h3>
-					<h4 class="subheading">Application Service Manager, Modelling & Simulation</h4>
-					<h4 class="subheading">09/2008 – 07/2011</h4>
-				  </div>
-				  <div>
-					<p>Joining an established, successful group as a member of the operations team, I played an active role in, and later spearheaded, a number of projects under Novartis’ industry leading “MODESIM” initiative.</p>
-					<p>I worked to establish and maintain close relationships with our customers in order to understand their rapidly evolving requirements. This focus helped the team to achieve a 98% customer satisfaction rating, which was described as “unprecedented” and ranks as one of the highest such ratings ever achieved within Novartis IT globally. It also led to a nomination from the customers for an “Above and Beyond” award, which I received in late 2010.</p>
-				  </div>
+				<span class='timeline-date'>09/2008 – 07/2011</span>
+				<div class="timeline-content">
+				  <h3>Novartis (via Datalynx AG)</h3>
+				  <h4 class="subheading">Application Service Manager, Modelling & Simulation</h4>
+				  <p>Joining an established, successful group as a member of the operations team, I played an active role in, and later spearheaded, a number of projects under Novartis’ industry leading “MODESIM” initiative.</p>
+				  <p>I worked to establish and maintain close relationships with our customers in order to understand their rapidly evolving requirements. This focus helped the team to achieve a 98% customer satisfaction rating, which was described as “unprecedented” and ranks as one of the highest such ratings ever achieved within Novartis IT globally. It also led to a nomination from the customers for an “Above and Beyond” award, which I received in late 2010.</p>
 				</div>
-				<div class="line"></div>
 			  </li>
 			  <li>
-				<div>
-				  <div>
-					<h3>Image Development Technology Ltd.</h3>
-					<h4 class="subheading">Senior Systems Consultant</h4>
-					<h4 class="subheading">05/2007 – 08/2008</h4>
-				  </div>
-				  <div>
-					<p>Adopting my first senior-level position, I worked as third and second line support for customers across the UK and in North America in addition to spearheading two upgrade projects. I also created and delivered technical trainings internally within the company, and assisted their junior staff with the efforts to develop their technical skills.</p>
-				  </div>
+				<span class='timeline-date'>05/2007 – 08/2008</span>
+				<div class="timeline-content">
+				  <h3>Image Development Technology Ltd.</h3>
+				  <h4 class="subheading">Senior Systems Consultant</h4>
+				  <p>Adopting my first senior-level position, I worked as third and second line support for customers across the UK and in North America in addition to spearheading two upgrade projects. I also created and delivered technical trainings internally within the company, and assisted their junior staff with the efforts to develop their technical skills.</p>
 				</div>
-				<div class="line"></div>
 			  </li>
 			  <li>
-				<div>
-				  <div>
-					<h4>Applied Computing & Engineering Ltd.</h4>
-					<h4 class="subheading">Computer Systems Engineer</h4>
-					<h4 class="subheading">03/2004 – 05/2007</h4>
-				  </div>
-				  <div>
-					<p>After successfully passing vetting for UK Ministry of Defence ‘SC’ security clearance and “learning the ropes” of Linux, Unix, and HPC, I undertook a number of projects to architect HPC clusters for large corporate clients.</p>
-					<p>I conceived and championed a new design of hybrid Windows/Linux cluster, tailored to meet the strict security requirements of our main clientele. This design was exceptionally well received by early customers, and played a key role in substantially increasing Applied Computing’s HPC cluster sales.</p>
-				  </div>
+				<span class='timeline-date'>03/2004 – 05/2007</span>
+				<div class="timeline-content">
+				  <h3>Applied Computing & Engineering Ltd.</h3>
+				  <h4 class="subheading">Computer Systems Engineer</h4>
+				  <p>After successfully passing vetting for UK Ministry of Defence ‘SC’ security clearance and “learning the ropes” of Linux, Unix, and HPC, I undertook a number of projects to architect HPC clusters for large corporate clients.</p>
+				  <p>I conceived and championed a new design of hybrid Windows/Linux cluster, tailored to meet the strict security requirements of our main clientele. This design was exceptionally well received by early customers, and played a key role in substantially increasing Applied Computing’s HPC cluster sales.</p>
 				</div>
-				<div class="line"></div>
-			  </li>  
+			  </li>
 			</ul>
 		  </div>
 		</div>
 	  </div>
 	</section>
 	<section id="qualifications">
-	  <div class=container-fluid>
+	  <div class="container-fluid container-padded">
 		<div class="row">
-		  <div class="col-sm-2">
+		  <div class="col-sm-2 section-title">
 			<h2>Qualifications</h2>
 		  </div>
-		  <div class="coll-sm-10">
+		  <div class="col-sm-10">
 			<table class="table">
 			  <tr>
-				<td>Open University BSc Hons Computing & IT</td><td>Incomplete</td>
+				<td>Open University BSc Hons Computing & IT</td><td>Partially Completed</td>
 			  </tr>
 			  <tr>
 				<td>Red Hat Certified Engineer</td><td><a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-127-841">111-127-841</a></td>
@@ -237,28 +218,28 @@
 	  </div>
 	</section>
 	<section id="languages">
-	  <div class=container-fluid>
+	  <div class="container-fluid container-alt container-padded">
 		<div class="row">
-		  <div class="col-sm-2">
+		  <div class="col-sm-2 section-title">
 			<h2>Languages</h2>
 		  </div>
 		  <div class="col-sm-5">
+			<img class="img-responsive img-map" alt="Graphic of the United Kingdom" src="img/gb.png" />
 			<h3>United Kingdom</h3>
 			<ul>
 			  <li>Conutry of Birth</li>
 			  <li>British & EU Citizen</li>
 			  <li>English - Fluent (Mother Tounge)</li>
 			</ul>
-			<img class="img-responsive" alt="Graphic of the United Kingdom" src="img/gb.png" />
 		  </div>
 		  <div class="col-sm-5">
+			<img class="img-responsive img-map" alt="Graphic of Switzerland" src="img/ch.png" />
 			<h3>Switzerland</h3>
 			<ul>
 			  <li>Conutry of Residence</li>
 			  <li>C Permit</li>
 			  <li>German - Basic (Approx. A2/B1)</li>
 			</ul>
-			<img class="img-responsive" alt="Graphic of Switzerland" src="img/ch.png" />
 		  </div>
 		</div>
 	  </div>

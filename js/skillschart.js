@@ -22,10 +22,10 @@ window.onload = function(){
             donutWidth: 100
         }],
         ['screen and (min-width: 1200px)', {
-            chartPadding: 30,
-            labelOffset: 100,
+            chartPadding: 35,
+            labelOffset: 80,
             labelDirection: 'explode',
-            donutWidth: 120
+            donutWidth: 110
         }]
     ];
 				
