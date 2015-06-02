@@ -1,8 +1,6 @@
 window.onload = function(){
     //Select a theme at random
     var arrThemes = ['css/colours-thunderbird.css','css/colours-tardis.css','css/colours-shuttle.css']
-
-    //var arrThemes = ['css/colours-shuttle.css']
     var selectedCss = arrThemes[Math.floor(Math.random() * arrThemes.length)]
     
     document.getElementById('colours-css').href = selectedCss
