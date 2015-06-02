@@ -1,3 +1,7 @@
+.body {
+  position: relative;
+}
+
 .jumbotron {
   margin-bottom: 0;
   background-repeat: no-repeat;

@@ -1,4 +1,6 @@
 window.onload = function(){
+    brandVisible();
+
     //Select a theme at random
     var arrThemes = ['css/colours-thunderbird.css','css/colours-tardis.css','css/colours-shuttle.css']
     var selectedCss = arrThemes[Math.floor(Math.random() * arrThemes.length)]
@@ -33,4 +35,20 @@ window.onload = function(){
     ];
 				
     new Chartist.Pie('#skillsChart', skillsData, options, responsiveOptions);
-};	
+};
+
+// Activate ScrollSpy
+$('body').scrollspy({ target: '#topnav' });
+
+// Control visibility of the navbar brand
+function brandVisible() {
+    if ( $('#name-title').visible() ) {
+        $('.navbar-brand').hide();
+    } else {
+        $('.navbar-brand').show();
+    };
+};
+
+window.onscroll = function() {
+    brandVisible();
+};

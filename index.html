@@ -26,9 +26,9 @@
 	<link rel="stylesheet" href="css/storybook.css">
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#topnav">
 
-    <nav class="navbar navbar-fixed-top navbar-inverse">
+    <nav id="topnav" class="navbar navbar-fixed-top navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -41,7 +41,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
 			<li><a href="#experience">Experience</a></li>
@@ -62,7 +62,7 @@
             <h3 class="visible-xs">Small Device View [.col-xs]</h3>
         	-->
 		  <div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-5 col-lg-8 title-text">
+			<div id="name-title" class="col-xs-6 col-sm-6 col-md-5 col-lg-8 title-text">
 			  <h1>Chris Bingham</h1>
 			  <h2>Linux, OpenStack, and Cloud Architect</h2>
 			</div>
@@ -89,10 +89,10 @@
 	<section id="about">
 	  <div class="container-fluid container-alt container-padded">
 		<div class="row">
-		  <div class="col-sm-2 section-title">
+		  <div class="col-xs-12 col-sm-12 col-md-2 section-title">
 			<h2>About Me</h2>
 		  </div>
-		  <div class=col-sm-10>
+		  <div class="col-xs-12 col-sm-12 col-md-10">
 			<p>I’m a systems engineer, solution architect, and team leader with broad experience across both Linux and Windows, having worked with customers in both Europe and North America in industries as diverse as defence, automotive, and pharmaceuticals.</p>
 			<p>I specialise in cloud, and in particular OpenStack and AWS, having recruited and lead a technical team of 12 to build the first pharmaceutical industry compliant OpenStack cloud. I have experience architecting and implementing web application infrastructures on AWS, including automation using CloudFormation, Heat, and Puppet.</p>
 			<p>In my projects I make heavy use of automation to streamline recurring processes and free up my time to do more interesting things!</p>
@@ -103,10 +103,10 @@
 	<section id="skills">
 	  <div class="container-fluid container-padded">
 		<div class="row">
-		  <div class="col-sm-2 section-title">
+		  <div class="col-xs-12 col-sm-12 col-md-2 section-title">
 			<h2>Skills</h2>
 		  </div>
-		  <div class="col-sm-10 skills-chart">
+		  <div class="col-xs-12 col-sm-12 col-md-10 skills-chart">
 			<div class="ct-chart ct-perfect-fourth" id="skillsChart"></div>
 		  </div>
 		</div>
@@ -115,10 +115,10 @@
 	<section id="experience">
 	  <div class="container-fluid container-alt container-padded">
 		<div class="row">
-		  <div class="col-sm-2 section-title">
+		  <div class="col-xs-12 col-sm-12 col-md-2 section-title">
 			<h2>Experience</h2>
 		  </div>
-		  <div class="col-xs-12 col-sm-10">
+		  <div class="col-xs-12 col-sm-12 col-md-10">
 			<ul class="timeline">
 			  <li>
 				<span class='timeline-date'>08/2014 – 04/2015</span>
@@ -177,10 +177,10 @@
 	<section id="qualifications">
 	  <div class="container-fluid container-padded">
 		<div class="row">
-		  <div class="col-sm-2 section-title">
+		  <div class="col-xs-12 col-sm-12 col-md-2 section-title">
 			<h2>Qualifications</h2>
 		  </div>
-		  <div class="col-sm-10">
+		  <div class="col-xs-12 col-sm-12 col-md-10">
 			<table class="table">
 			  <tr>
 				<td>Open University BSc Hons Computing & IT</td><td>Partially Completed</td>
@@ -217,10 +217,10 @@
 	<section id="languages">
 	  <div class="container-fluid container-alt container-padded">
 		<div class="row">
-		  <div class="col-sm-2 section-title">
+		  <div class="col-xs-12 col-sm-12 col-md-2 section-title">
 			<h2>Languages</h2>
 		  </div>
-		  <div class="col-xs-12 col-sm-5">
+		  <div class="col-xs-12 col-sm-6 col-md-5">
 			<img class="img-responsive img-map" alt="Graphic of the United Kingdom" src="img/gb.png" />
 			<h3>United Kingdom</h3>
 			<ul>
@@ -229,7 +229,7 @@
 			  <li>English - Fluent (Mother Tounge)</li>
 			</ul>
 		  </div>
-		  <div class="col-xs-12 col-sm-5">
+		  <div class="col-xs-12 col-sm-6 col-md-5">
 			<img class="img-responsive img-map" alt="Graphic of Switzerland" src="img/ch.png" />
 			<h3>Switzerland</h3>
 			<ul>
@@ -247,7 +247,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/jquery.visible.min.js"></script>
 	<script src="js/chartist.min.js"></script>
 	<script src="js/storybook.js"></script>
  
