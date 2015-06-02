@@ -5645,7 +5645,7 @@ button.close {
 }
 
 .jumbotron {
-  background-image: url("../img/bg_tardis.jpg");
+  background-image: url("../img/bg_tardis.jpg")
 }
 
 .ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {

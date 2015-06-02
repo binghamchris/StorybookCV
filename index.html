@@ -21,9 +21,9 @@
     <link href="css/starter-template.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/chartist.min.css">
 	<link rel="stylesheet" href="css/timeline.css">
-	<link id="colours-css" rel="stylesheet" href="css/thunderbird.css">
+	<link id="colours-css" rel="stylesheet" href="css/colours-thunderbird.css">
 	
-	<link rel="stylesheet" href="css/storyboard.css">
+	<link rel="stylesheet" href="css/storybook.css">
   </head>
 
   <body>
@@ -54,16 +54,25 @@
 	<section id="home">
 	  <div class="jumbotron">
 		<div class="container-fluid title-text">
+			<!-- DIAG: displays which Bootstrap grid classes are currently active-->
+			<!--
+			<h3 class="visible-lg">Large Screen View [.col-lg]</h3>
+            <h3 class="visible-md">Desktop View [.col-md]</h3>
+            <h3 class="visible-sm">Tablet View [.col-sm]</h3>
+            <h3 class="visible-xs">Small Device View [.col-xs]</h3>
+        	-->
 		  <div class="row">
-			<div class="col-sm-8 title-text">
+			<div class="col-xs-6 col-sm-6 col-md-5 col-lg-8 title-text">
 			  <h1>Chris Bingham</h1>
 			  <h2>Linux, OpenStack, and Cloud Architect</h2>
 			</div>
-			<div class="col-sm-4 social-links-div">
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 social-links-div">
 			  <ul class="social-links">
 				<li><a href="https://ch.linkedin.com/in/binghamchris"><img class="img-responsive" alt="LinkedIn Profile" src="img/linkedin.jpg" /></a></li>
 				<li><a href="https://www.xing.com/profile/Chris_Bingham"><img class="img-responsive" alt="Xing Profile" src="img/xing.jpg" /></a></li>
-				<li><a href="https://github.com/binghamchris"><img class="img-responsive" alt="Github Profile" src="img/github.jpg" />></a></li>
+				<li><a href="https://github.com/binghamchris"><img class="img-responsive" alt="Github Profile" src="img/github.jpg" /></a></li>
 				<li><a href="https://clustersandclouds.wordpress.com"><img class="img-responsive" alt="Blog" src="img/wordpress.jpg" /></a></li>
 				<li><a href="https://www.flickr.com/photos/butters-photos"><img class="img-responsive" alt="Flickr" src="img/flickr.jpg" /></a></li>
 				<li><a href="callto:chris.pearit"><img class="img-responsive" alt="Skype" src="img/skype.jpg" /></a></li>
@@ -241,6 +250,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
 	<script src="js/chartist.min.js"></script>
 	<script src="js/storybook.js"></script>
-  
+ 
 
 </body></html>
