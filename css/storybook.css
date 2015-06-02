@@ -1,14 +1,15 @@
-.jumbotron {
-  background-repeat: no-repeat;
-  background-position: top center;
-  min-height: 430px;
-  background-attachment: fixed;
-  margin-bottom: 0;
+.body {
+  position: relative;
 }
 
-.title-text, .social-links-div {
-  transform: translateY(-10%);
+.jumbotron {
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  height: 430px
 }
+
 .title-text h1 {
   font-family: Verdana, Geneva, sans-serif;
   margin: 0;
@@ -24,7 +25,8 @@
   list-style-image: none;
   margin: 0;
   padding: 0;
-  text-align: right;
+  text-align: left;
+  padding-top: 7.5em;
 }
 
 .social-links li {
@@ -50,12 +52,29 @@
 }
 
 .ct-chart {
+  min-height: 400px;
   max-height: 550px;
 }
 .skills-chart {
+  min-height: 400px;
   max-height: 550px;
 }
 
 .ct-chart .ct-label {
   font-size: 14px;
+}
+/*
+.skills-chart {
+  min-height: 700px;
+}
+
+#skillsChart {
+  min-height: 600px;
+  max-width: 75%;
+}*/
+
+@media screen and (max-width: 1999px) {
+  .jumbotron {
+    background-position: 25% top;
+  }
 }

@@ -5647,7 +5647,7 @@ button.close {
 }
 
 .jumbotron {
-  background-image: url("../img/bg_thunderbird.jpg");
+  background: url("../img/bg_thunderbird.jpg")
 }
 
 .ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
